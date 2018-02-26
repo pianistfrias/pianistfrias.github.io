@@ -2,8 +2,6 @@
   <meta name="google-site-verification" content="X4nYVk4wAVy8TY9eAKAEwDeyX_6api4SLLFNpYfNjHM" />
 </head>
 <body>
-  <p id="demo"></p>
-  
   <!-- Redirect to sheet music website on musicnotes -->
   <script>
     var redirect = {
@@ -11,7 +9,24 @@
     };
     
     var prev = document.referrer;
-    document.getElementById("demo").innerHTML = prev;
+    console.log(prev);
+    var n = prev.indexOf("v=");
+    if (n != -1) {
+      vidID = prev.substring(n+2,n+13);
+      console.log(vidID);
+      console.log(redirect[vidID]);
+      if (vidID in redirect) {
+        window.location = redirect[vidID];
+      }
+      else {
+        //window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
+        console.log("Not found A");
+      }
+    }
+    else {
+      //window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
+      console.log("Not found B");
+    }
   </script>
     
   
