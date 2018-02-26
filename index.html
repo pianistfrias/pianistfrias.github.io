@@ -13,19 +13,19 @@
     var n = prev.indexOf("v=");
     if (n != -1) {
       vidID = prev.substring(n+2,n+13);
-      console.log(vidID);
-      console.log(redirect[vidID]);
+      //console.log(vidID);
+      //console.log(redirect[vidID]);
       if (vidID in redirect) {
         window.location = redirect[vidID];
       }
       else {
-        //window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
-        console.log("Not found A");
+        window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
+        //console.log("Not found A");
       }
     }
     else {
-      //window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
-      console.log("Not found B");
+      window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
+      //console.log("Not found B");
     }
   </script>
     
