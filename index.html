@@ -9,6 +9,7 @@
     };
     
     var prev = document.referrer;
+    console.log(prev);
     var n = prev.indexOf("v=");
     if (n != -1) {
       vidID = prev.substring(n+2,n+13);
