@@ -2,32 +2,14 @@
   <meta name="google-site-verification" content="X4nYVk4wAVy8TY9eAKAEwDeyX_6api4SLLFNpYfNjHM" />
 </head>
 <body>
-  <!-- Redirect to sheet music website on musicnotes -->
+  <!-- Redirect to sheet music homepage on musicnotes -->
   <script>
-    var redirect = {
-      "ikeN1vuV0XA": "http://bit.ly/2CiCv0A"
-    };
-    
-    var prev = document.referrer;
-    console.log(prev);
-    var n = prev.indexOf("v=");
-    if (n != -1) {
-      vidID = prev.substring(n+2,n+13);
-      //console.log(vidID);
-      //console.log(redirect[vidID]);
-      if (vidID in redirect) {
-        window.location = redirect[vidID];
-      }
-      else {
-        window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
-        //console.log("Not found A");
-      }
-    }
-    else {
-      window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
-      //console.log("Not found B");
-    }
+    window.location = "https://www.musicnotes.com/sheet-music/artist/pianist-frias";
   </script>
-    
   
+  <!-- If for some odd and rare reason javascript is disabled -->
+  <iframe src="https://www.musicnotes.com/sheet-music/artist/pianist-frias" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+    <!-- If for some odd reason javascript is disabled and iframe does not work -->
+      Musicnotes.com PianistFrias Landing Page <a href="https://www.musicnotes.com/sheet-music/artist/pianist-frias">https://www.musicnotes.com/sheet-music/artist/pianist-frias</a>
+  </iframe>
 </body>
